@@ -1,0 +1,62 @@
+/**
+ * Advanced Post Carousel - Frontend Styles
+ */
+
+/* Estilos generales del carrusel */
+.apc-carousel-wrapper {
+    margin-bottom: 30px;
+}
+
+.apc-carousel {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.apc-carousel.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Estilos para los slides */
+.apc-slide {
+    padding: 10px;
+}
+
+/* Estilos para las tarjetas de posts */
+.apc-post-card {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.apc-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Más estilos para imágenes, títulos, contenido, etc. */
+/* Contenido abreviado por espacio */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .apc-list-inner {
+        flex-direction: column;
+    }
+    
+    .apc-list-thumbnail {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    
+    .apc-carousel .slick-prev {
+        left: 10px;
+    }
+    
+    .apc-carousel .slick-next {
+        right: 10px;
+    }
+}
